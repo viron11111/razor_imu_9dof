@@ -1,0 +1,11 @@
+<launch>
+  
+  <!--node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0.0 0.0 0.0 2.0 0.0 0.0 map imu 100" /-->
+
+  <node pkg="razor_imu_9dof" type="node.py" name="node" output="screen">
+        <param name="device" type="string" value="/dev/razorimu" />
+  </node>
+
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d imu_test.rviz"/-->
+
+</launch>
